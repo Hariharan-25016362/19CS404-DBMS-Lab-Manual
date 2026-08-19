@@ -25,7 +25,7 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 <img width="1536" height="1024" alt="ChatGPT Image Aug 19, 2026, 01_42_21 PM" src="https://github.com/user-attachments/assets/870bcef4-e3cb-4b48-8f6d-db5b01a369b8" />
 
 
-### Entities and Attributes
+
 
 ## Entities and Attributes
 
@@ -40,7 +40,7 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 | **Attendance** | **AttendanceID (PK)**, BookingID (FK), AttendanceStatus | Stores attendance for each booked session. |
 | **Payment** | **PaymentID (PK)**, MemberID (FK), BookingID (FK), Amount, PaymentDate, PaymentType | Records membership and session payments. |
 
-### Relationships and Constraints
+
 
 ## Relationships and Constraints
 
@@ -54,7 +54,7 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 | Member **makes** Payment | 1 : N | Total (Payment), Partial (Member) | A member can make multiple payments. |
 | Session_Booking **may generate** Payment | 1 : 1 | Partial (Both) | A session payment can be linked to a booking when applicable. |
 
-### Assumptions
+
 
 ## Assumptions
 
@@ -87,7 +87,7 @@ The Central Library wants to manage book lending and cultural events.
 <img width="1536" height="1024" alt="chat 2" src="https://github.com/user-attachments/assets/96fb7d0f-d41f-47c8-bc05-47a8e5cfcdcc" />
 
 
-### Entities and Attributes
+
 
 ## Entities and Attributes
 
@@ -103,7 +103,7 @@ The Central Library wants to manage book lending and cultural events.
 | **Room** | **RoomID (PK)**, RoomName, Capacity, Location, RoomType | Stores rooms used for events and study. |
 | **Loan_Fine** | **FineID (PK)**, LoanID (FK), FineDate, Amount, Reason | Stores overdue fines for late book returns. |
 
-### Relationships and Constraints
+
 
 ## Relationships and Constraints
 
@@ -119,7 +119,7 @@ The Central Library wants to manage book lending and cultural events.
 | Event **held in** Room | N : 1 | Total (Event), Partial (Room) | Each event is held in one room; a room can host multiple events at different times. |
 | Loan **generates** Loan_Fine | 1 : 1 | Partial (Loan), Total (Loan_Fine) | A late loan may generate one overdue fine. |
 
-### Assumptions
+
 ## Assumptions
 
 - Every library member has a unique **MemberID**.
@@ -175,7 +175,7 @@ A popular restaurant wants to manage reservations, orders, and billing.
 | **Waiter** | **WaiterID (PK)**, Name, Phone, Shift | Stores restaurant waiter details. |
 | **Reservation_Waiter** | **ReservationID (PK, FK)**, **WaiterID (PK, FK)** | Associative entity for assigning waiters to reservations. |
 
-### Relationships and Constraints
+
 
 ## Relationships and Constraints
 
@@ -193,7 +193,7 @@ A popular restaurant wants to manage reservations, orders, and billing.
 
 
 
-### Assumptions
+
 ## Assumptions
 
 - Every restaurant has a unique **RestaurantID**.
